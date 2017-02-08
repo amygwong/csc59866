@@ -5,5 +5,6 @@ phrase4 = "Create a new text file"
 
 #Common word check
 for i in phrase1.split():
-    print i
-
+    for word in phrase2.split():
+        if i.lower() == word.lower():
+              
