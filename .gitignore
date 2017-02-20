@@ -4,5 +4,6 @@ syntax: glob
 *.DS_Store
 *.log
 *.pyc
+
 .venv/
 venv/
