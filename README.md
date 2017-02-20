@@ -4,6 +4,7 @@ By: Shawn Mathew, Anthony Tan and Amy Wong
 
 **Running Locally**
 Make sure you have the latest Git and Python version installed!
+
 `$ git clone https://github.com/amygwong/csc59866.git`
 
 Create and use a virtual environment:
