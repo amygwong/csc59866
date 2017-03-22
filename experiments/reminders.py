@@ -39,7 +39,7 @@ def getUserInput(input):
         return value
     except sr.UnknownValueError:
         print("Oops! Didn't catch that")
-
+"""
 try:
     cont = True
     while cont:
@@ -49,6 +49,7 @@ try:
             cont = False
 except KeyboardInterrupt:
     pass
+"""
 '''
 OSASCRIPT = ('<<END\n'
              'on run argv\n'
