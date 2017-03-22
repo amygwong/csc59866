@@ -20,12 +20,8 @@ def text_to_vector(text):
      words = WORD.findall(text)
      return Counter(words)
 
-text1 = 'Open the folder .'
-text2 = 'Create a new text file.'
+def distScore(text1,text2):
+    vector1 = text_to_vector(text1)
+    vector2 = text_to_vector(text2)
+    return get_cosine(vector1, vector2)
 
-vector1 = text_to_vector(text1)
-vector2 = text_to_vector(text2)
-
-cosine = get_cosine(vector1, vector2)
-
-print 'Cosine:', cosine 
