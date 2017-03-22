@@ -13,8 +13,8 @@ def remindersChoices(value):
         system("open -a Reminders")
     elif value == "close reminders":
         system("pkill Reminders")
-    elif value == "make reminder":
-        print(value)
+        #elif value == "make reminder":
+#print(value)
     else:
         print("Command does not exist")
         pass
@@ -24,8 +24,8 @@ def calendarChoices(value):
         system("open -a Calendar")
     elif value == "close calendar":
         system("pkill Calendar")
-    elif "add event" in value:
-        print(value)
+        #elif "add event" in value:
+        #print(value)
     else:
         print("Command does not exist")
         pass
@@ -44,6 +44,7 @@ try:
     cont = True
     while cont:
         value = getUserInput("Command me")
+        remindersChoices(value)
         calendarChoices(value)
         if value == "no":
             cont = False

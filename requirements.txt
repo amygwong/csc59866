@@ -1,7 +1,4 @@
-appdirs==1.4.0
-packaging==16.8
-pocketsphinx==0.1.3
+certifi==2017.1.23
+py-applescript==1.0.0
 PyAudio==0.2.10
-pyparsing==2.1.10
-six==1.10.0
-SpeechRecognition==3.6.0
+SpeechRecognition==3.6.3
