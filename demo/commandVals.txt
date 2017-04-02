@@ -1,0 +1,3 @@
+This file is just for reference
+Put a value and follow it by the command associated with it
+0: Open Safari
