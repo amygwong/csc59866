@@ -1,5 +1,4 @@
 from dist_exp import distScore
-from reminders import getUserInput
 
 #This is a class that is meant to hold commands for a type of command
 class commandList:
