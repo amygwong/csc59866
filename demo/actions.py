@@ -11,11 +11,11 @@ def action(com):
         print("Command not classified")
     
     #opening safari
-    else if com == 0:
+    elif com == 0:
         system("open /Applications/Safari.app")
-    else if com == 1:
-    else if com == 2:
-    else if com == 3:
-    else if com == 4:
-    else if com == 5:
-    else if com == 6:
+    elif com == 1:
+    elif com == 2:
+    elif com == 3:
+    elif com == 4:
+    elif com == 5:
+    elcom == 6:

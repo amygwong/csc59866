@@ -31,6 +31,7 @@ class commands:
             return -1
     
     
-
+"""
 a = commands()
 print(a.getCommand("can you add a new event"))
+"""
