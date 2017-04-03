@@ -28,7 +28,7 @@ def makeEvent():
 
 
 
-#Function for making events 
+#Function for making events
 def makeEvents(desc, summ, loc):
 
     cmd = """osascript -e'Tell application "Calendar"
@@ -41,6 +41,34 @@ def makeEvents(desc, summ, loc):
     end Tell'
 
     """ % (desc, summ, loc)
+
+    system(cmd)
+
+
+#Function for listing the start times of each event for the day
+def listEvents():
+    cmd = """osascript -e'property my_calendar : "Home"
+
+    set my_date to (current date) -- or any other date you want
+
+    copy my_date to Start_Date
+    set time of Start_Date to 0
+    copy my_date to End_Date
+    set time of End_Date to 86399 -- 23:59:59 in seconds
+
+    tell application "Calendar"
+    tell calendar my_calendar
+        -- read all events betwen start and end dates
+        set my_List to (every event whose (start date is greater than or equal to Start_Date) and (start date is less than or equal to End_Date))
+
+        repeat with myEvent in my_List -- loop through each event
+            --do something
+            log (start date of myEvent) as string
+        end repeat
+    end tell --Calendar
+    end tell -- application'
+
+    """
 
     system(cmd)
 
