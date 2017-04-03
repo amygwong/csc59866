@@ -23,11 +23,11 @@ def openMessages():
 def openMail():
   system("open /Applications/Mail.app")
 
+def openStore():
+    system("open /Applications/App\ Store.app")
 
 
-
-
-
+system("say -v Daniel Hello")
 
 
 # Function to create Folders on Desktop
@@ -49,7 +49,7 @@ def deleteDesktopFolder(str):
 
 
 
-
+'''
 str = input("Hi, What is your first name?")
 system('say Nice to meet you ' + str)
 mkdir(path.expanduser("~/Desktop/" + str))
@@ -58,3 +58,5 @@ system('say Do you see it?')
 str2 = input("Do you see it?")
 rmdir(path.expanduser("~/Desktop/" + str))
 system('say Now it is gone.')
+
+'''
