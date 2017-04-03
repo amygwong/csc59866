@@ -3,7 +3,7 @@ from calcDists import commandList
 class commands:
     def __init__(self):
         #this variable stores the possible commands
-        files = ["openFile.txt", "addEvent.txt"]
+        files = ["openSafari.txt", "addEvent.txt"]
         self.comList = []
         
         #load the files into the commandlist
@@ -19,11 +19,12 @@ class commands:
         maxInd = 0
         for ind,com in enumerate(self.comList):
             newVal = com.getScore(inp)
+            print(ind)
             print(newVal)
             if newVal > maxVal:
                 maxVal = newVal
                 maxInd = ind
-        if maxInd > .4:
+        if maxVal > .4:
             print (self.comList[maxInd].addCommand(inp))
             self.comList[maxInd].writeToFile()
             return maxInd
@@ -31,7 +32,4 @@ class commands:
             return -1
     
     
-"""
-a = commands()
-print(a.getCommand("can you add a new event"))
-"""
+

@@ -7,7 +7,7 @@ class commandList:
         #this variable stores the list of commands
         self.samples = []
         self.filename = "openFile.txt"
-        self.maxSize = 7
+        self.maxSize = 10
         
     #calculate how close the input is to the command
     def getScore(self,inp):

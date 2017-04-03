@@ -14,8 +14,14 @@ def action(com):
     elif com == 0:
         system("open /Applications/Safari.app")
     elif com == 1:
+        print("Bad")
     elif com == 2:
+        print("Bad")
     elif com == 3:
+        print("Bad")    
     elif com == 4:
+        print("Bad")
     elif com == 5:
-    elcom == 6:
+        print("Bad")
+    elif com == 6:
+        print("Bad")
