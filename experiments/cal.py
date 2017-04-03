@@ -28,6 +28,24 @@ def makeEvent():
 
 
 
+#Function for making events 
+def makeEvents(desc, summ, loc):
+
+    cmd = """osascript -e'Tell application "Calendar"
+         activate
+         tell calendar "Home"
+              set theCurrentDate to current date
+              make new event at end with properties {description:"%s", summary:"%s", location:"%s", start date:theCurrentDate, end date:theCurrentDate +120 * Minutes}
+         end tell
+         reload calendars
+    end Tell'
+
+    """ % (desc, summ, loc)
+
+    system(cmd)
+
+
+
 
 system('say Hi, Did you say you wanted to make an event? ')
 reply = input("Hi, Did you say you wanted to make an event?")
