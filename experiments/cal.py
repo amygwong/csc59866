@@ -72,9 +72,26 @@ def listEvents():
 
     system(cmd)
 
+def listEvents2():
+    cmd = """osascript -e'set {year:y, month:m, day:d, weekday:wd} to (current date)
+set str to (wd as string) & ", " & (d as string) & " " & (m as string) & ", " & (y as string) & " 12:00:00 AM"
+set today to date str
+set tomorrow to today + 60 * 60 * 24
+
+tell application "Calendar"
+          tell calendar "Home"
+                    set curr to every event whose start date is greater than or equal to today ¬
+                              and start date is less than or equal to tomorrow
+          end tell
+end tell'
+
+    """
+
+    system(cmd)
 
 
 
+'''
 system('say Hi, Did you say you wanted to make an event? ')
 reply = input("Hi, Did you say you wanted to make an event?")
 
@@ -82,3 +99,6 @@ if reply == "yes":
     makeEvent()
 else:
     system('say OK, maybe some other time then.')
+'''
+
+listEvents2()
