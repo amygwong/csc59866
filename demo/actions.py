@@ -1,4 +1,5 @@
 from os import system, mkdir, path, rmdir
+import instruct
 
 #this file is to handle the actions after classification
 
@@ -12,16 +13,14 @@ def action(com):
     
     #opening safari
     elif com == 0:
-        system("open /Applications/Safari.app")
+        instruct.openSafari()
     elif com == 1:
-        print("Bad")
+       instruct.closeSafari()
     elif com == 2:
-        print("Bad")
+        instruct.openMessages()
     elif com == 3:
-        print("Bad")    
+        instruct.closeMessages()    
     elif com == 4:
-        print("Bad")
+        instruct.openNotes()
     elif com == 5:
-        print("Bad")
-    elif com == 6:
-        print("Bad")
+        instruct.closeNotes()
