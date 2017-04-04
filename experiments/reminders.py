@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 r = sr.Recognizer()
 m = sr.Microphone()
-
+'''
 def remindersChoices(value):
     if value == "open reminders":
         system("open -a Reminders")
@@ -29,7 +29,7 @@ def calendarChoices(value):
     else:
         print("Command does not exist")
         pass
-
+'''
 def getUserInput(input):
     system('say ' + input)
     with m as source: audio = r.listen(source)
@@ -44,8 +44,8 @@ try:
     cont = True
     while cont:
         value = getUserInput("Command me")
-        remindersChoices(value)
-        calendarChoices(value)
+        #remindersChoices(value)
+        #calendarChoices(value)
         if value == "no":
             cont = False
 except KeyboardInterrupt:
