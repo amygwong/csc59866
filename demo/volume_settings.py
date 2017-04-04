@@ -17,6 +17,25 @@ def setVolume(value):
         system(cmd)
         return 1
 
+def increaseVolume():
+    value = getVolume()
+    value += 10
+    if value > 100:
+        value = 100
+    cmd = """osascript -e 'set volume output volume "%s"' """ % (value)
+    system(cmd)
+
+def decreaseVolume():
+    value = getVolume()
+    value -= 10
+    if value < 0:
+        value = 0
+    cmd = """osascript -e 'set volume output volume "%s"' """ % (value)
+    system(cmd)
+
+def setFullVolume():
+    system("""osascript -e 'set volume output volume "100"' """)
+
 # returns True if volume is muted, false otherwise
 def getMuteState():
     return system("""osascript -e 'output muted of (get volume settings)'""")
@@ -53,6 +72,13 @@ def getUserInput(input):
 
 # testing
 '''
+print(setVolume("30"))
+print(getVolume())
+increaseVolume()
+decreaseVolume()
+print(getVolume())
+setFullVolume()
+print(getVolume())
     print(setVolume("30"))
     print(setVolume("130"))
     print(getVolume())
@@ -62,7 +88,7 @@ def getUserInput(input):
     setMuteState("false")
     print(getMuteState())
 '''
-
+'''
 try:
     cont = True
     while cont:
@@ -72,3 +98,4 @@ try:
             cont = False
 except KeyboardInterrupt:
     pass
+'''
