@@ -12,7 +12,10 @@ val = -1
 
 while True:
     sys_says = "Command me"
-    inp = getUserInput(sys_says)    
+        #while inp == "" :
+    inp = getUserInput(sys_says)
+    while inp == "" or inp == -1:
+        inp = getUserInput("Try Again")
     if inp == "quit":
         break
     #handle the command classification    
