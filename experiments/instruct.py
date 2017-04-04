@@ -35,34 +35,45 @@ def openPhotos():
 # Functions to Close apps
 
 def closeSafari():
-  system("pkill Safari")
+    cmd = """osascript -e 'quit app "Safari"' """
+    system(cmd)
 
 def closeITunes():
-  system("pkill iTunes")
+    cmd = """osascript -e 'quit app "iTunes"' """
+    system(cmd)
+
 
 def closeMessages():
-  system("pkill Messages")
+    cmd = """osascript -e 'quit app "Messages"' """
+    system(cmd)
 
 def closeMail():
-    system("pkill Mail")
+    cmd = """osascript -e 'quit app "Mail"' """
+    system(cmd)
 
 def closeStore():
-    system("pkill App\ Store")
+    cmd = """osascript -e 'quit app "App\ Store"' """
+    system(cmd)
 
 def closeReminder():
-    system("pkill Reminders")
+    cmd = """osascript -e 'quit app "Reminders"' """
+    system(cmd)
 
 def closeCalendar():
-    system("pkill Calendar")
+    cmd = """osascript -e 'quit app "Calendar"' """
+    system(cmd)
 
 def closeCalculator():
-    system("pkill Calculator")
+    cmd = """osascript -e 'quit app "Calculator"' """
+    system(cmd)
 
 def closeNotes():
-    system("pkill Notes")
+    cmd = """osascript -e 'quit app "Notes"' """
+    system(cmd)
 
 def closePhotos():
-    system("pkill Photos")
+    cmd = """osascript -e 'quit app "Photos"' """
+    system(cmd)
 
 
 
