@@ -6,7 +6,9 @@ m = sr.Microphone()
 # system says the input argument and returns the spoken user input as text
 def getUserInput(input):
     system('say ' + input)
-    with m as source: audio = r.listen(source)
+    with m as source: 
+        r.adjust_for_ambient_noise(source)
+        audio = r.listen(source)
     try:
         value = r.recognize_google(audio)
         print("You said {}".format(value))

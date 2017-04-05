@@ -6,7 +6,7 @@ m = sr.Microphone()
 
 # get volume which is between 0 and 100
 def getVolume():
-    return system("""osascript -e 'output volume of (get volume settings)'""")
+    return system("""osascript -e 'output volume of (get volume settings)' > curVol.txt""")
 
 # set volume between 0 and 100
 def setVolume(value):
@@ -18,15 +18,23 @@ def setVolume(value):
         return 1
 
 def increaseVolume():
-    value = getVolume()
+
+    getVolume()
+    with open('curVol.txt') as f:
+        for line in f:
+            value = int(line)
     value += 10
     if value > 100:
         value = 100
     cmd = """osascript -e 'set volume output volume "%s"' """ % (value)
     system(cmd)
+    system("rm curVol.txt")
 
 def decreaseVolume():
-    value = getVolume()
+    getVolume()
+    with open('curVol.txt') as f:
+        for line in f:
+            value = int(line)
     value -= 10
     if value < 0:
         value = 0

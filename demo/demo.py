@@ -20,6 +20,7 @@ while True:
         break
     #handle the command classification    
     val = a.getCommand(inp)
+    print(val)
     action(val)
     #create function to handle execution
 

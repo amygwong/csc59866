@@ -1,5 +1,8 @@
 from os import system, mkdir, path, rmdir
+from speech_to_text import getUserInput
 import instruct
+import vol
+import cal
 
 #this file is to handle the actions after classification
 
@@ -24,3 +27,18 @@ def action(com):
         instruct.openNotes()
     elif com == 5:
         instruct.closeNotes()
+    elif com == 6:
+        vol.increaseVolume()
+    elif com == 7:
+        vol.decreaseVolume()
+    elif com == 8:
+        print("Work in progress atm")
+    elif com == 9:
+        #cal.listEvents()
+        print("Work in progress atm")
+    elif com == 10:
+        inp = ""
+        while inp == "" or inp == -1:
+            inp = getUserInput("What should the folder be named?")
+        print(inp)
+        instruct.createDesktopFolder(inp)

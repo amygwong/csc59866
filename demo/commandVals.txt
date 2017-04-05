@@ -6,3 +6,8 @@ Put a value and follow it by the command associated with it
 3: Close Messages
 4: Open Notes
 5: Close Notes
+6: Volume Up
+7: Volume Down
+8: Set Volume Level
+9: List Calendar Events
+10: Create Folder

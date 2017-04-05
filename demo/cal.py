@@ -72,13 +72,3 @@ def listEvents():
 
     system(cmd)
 
-
-
-
-system('say Hi, Did you say you wanted to make an event? ')
-reply = input("Hi, Did you say you wanted to make an event?")
-
-if reply == "yes":
-    makeEvent()
-else:
-    system('say OK, maybe some other time then.')

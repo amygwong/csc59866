@@ -6,7 +6,9 @@ class commands:
         #this variable stores the possible commands
         
         files = ["openSafari.txt", "closeSafari.txt","openMessages.txt",
-                 "closeMessages.txt", "openNotes.txt", "closeNotes.txt"
+                 "closeMessages.txt", "openNotes.txt", "closeNotes.txt",
+                 "upVol.txt", "downVol.txt","setVol.txt", "listEvents.txt",
+                 "createFolder.txt"
                 ]
               
         #add the current directory path and trainingData folder to path for opening files        
@@ -32,13 +34,13 @@ class commands:
         maxInd = 0
         for ind,com in enumerate(self.comList):
             newVal = com.getScore(inp)
-            print(ind)
-            print(newVal)
+            #print(ind)
+            #print(newVal)
             if newVal > maxVal:
                 maxVal = newVal
                 maxInd = ind
         if maxVal > .4:
-            print (self.comList[maxInd].addCommand(inp))
+            #print (self.comList[maxInd].addCommand(inp))
             self.comList[maxInd].writeToFile()
             return maxInd
         else:

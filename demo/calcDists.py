@@ -59,17 +59,3 @@ class commandList:
                 f.write(i)
                 f.write('\n')
             f.close()
-
-    
-             
-"""   
-#inp =  "Open fold"
-a = commandList()
-a.readFile()
-inp = getUserInput("hello")
-print(a.getScore(inp))
-print("____________________")
-print(a.addCommand(inp))
-a.writeToFile()
-print(a.samples)
-"""
