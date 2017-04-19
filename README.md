@@ -2,6 +2,8 @@
 Computer Assistance System For Visually Challenged 
 By: Shawn Mathew, Anthony Tan and Amy Wong
 
+NOTE: To see the number of commits made by each member, please click on commits link underneath the <> Code tab. Do not look at the Graphs tab.
+
 **Running Locally**
 Make sure you have the latest Git and Python version installed!
 
