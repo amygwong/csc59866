@@ -17,21 +17,21 @@ startTime = time.time()
 
 while True:
     sys_says = "Command me"
-        #while inp == "" :
-    inp = input()
-    """inp = getUserInput(sys_says)
+    inp = getUserInput(sys_says)
+    
     while inp == "" or inp == -1:
         inp = getUserInput("Try Again")
+        
     #handle quiting case    
     if inp == "quit" or inp == "quick":
         break
-        """
+        
     #handle the command classification    
     val = a.getCommand(inp)
     print(val)
     #do the command
     action(val)
-    print(time.time()-startTime)
+    
     if time.time()-startTime > 120:
         #do passive checking here
         print("Passive check now")

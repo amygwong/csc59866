@@ -1,5 +1,5 @@
-decrease volume
-volume down
-can you decrease the volume please
-please decrease the volume
-turn volume down
+decrease volume 1
+volume down 1
+can you decrease the volume please 1
+please decrease the volume 1
+turn volume down 1
