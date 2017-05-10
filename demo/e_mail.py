@@ -1,10 +1,7 @@
 import time
-import speech_recognition as sr
+from speech_to_text import getUserInput
 from os import system, path
 import subprocess
-
-r = sr.Recognizer()
-m = sr.Microphone()
 
 # list of all the accounts in Mails
 def getMailAccounts():
@@ -21,24 +18,24 @@ def newEmail(subject, body, recipient, attachment):
     if recipient == "" and attachment == "":
         cmd = """ osascript -e 'tell application "Mail"
             make new outgoing message with properties {visible:true, subject:"%s", content:"%s"}
-        end tell'""" % (subject, body)
+            end tell'""" % (subject, body)
     # given subject, body and attahcment, recipient missing
     elif recipient == "":
         cmd = """ osascript -e 'tell application "Mail"
             make new outgoing message with properties {visible:true, subject:"%s", content:"%s"}
             tell result
-                make new attachment with properties {file name:"%s"}
+            make new attachment with properties {file name:"%s"}
             end tell
-        end tell'""" % (subject, body, attachment)
+            end tell'""" % (subject, body, attachment)
     # given subject, body, and recipient, attachment missing
     elif attachment == "":
         cmd = """ osascript -e 'tell application "Mail"
             make new outgoing message with properties {visible:true, subject:"%s", content:"%s"}
             tell result
-                make new to recipient with properties {address:"%s"}
+            make new to recipient with properties {address:"%s"}
             end tell
             end tell'""" % (subject, body, recipient)
-    # given all inputs
+# given all inputs
     else:
         cmd = """ osascript -e 'tell application "Mail"
             make new outgoing message with properties {visible:true, subject:"%s", content:"%s"}
@@ -54,7 +51,7 @@ def sendCurrent():
     cmd = """ osascript -e 'tell application "Mail"
         set newMessage to item -1 of ((every outgoing message))
         tell newMessage
-            send
+        send
         end tell
         end tell'"""
     system(cmd)
@@ -63,16 +60,16 @@ def readNewMail():
     cmd = """ osascript -e 'tell application "Mail"
         set unreadMessages to (get every message of inbox whose read status is false)
         repeat with eachMessage in unreadMessages
-            say "mail received at"
-                say ((get date received of eachMessage) as rich text)
-                say "from"
-                say (get sender of eachMessage)
-                say "subject"
-                say (get subject of eachMessage)
-                say "content"
-                say (get content of eachMessage)
-                say "end of mail"
-                set read status of eachMessage to true
+        say "mail received at"
+        say ((get date received of eachMessage) as rich text)
+        say "from"
+        say (get sender of eachMessage)
+        say "subject"
+        say (get subject of eachMessage)
+        say "content"
+        say (get content of eachMessage)
+        say "end of mail"
+        set read status of eachMessage to true
         end repeat
         end tell'"""
     system(cmd)
@@ -81,17 +78,17 @@ def readNewMail():
 def checkNew():
     cmd = """osascript -e'set newmail to false
         tell application "Mail"
-            check for new mail
-            set myInbox to every message of inbox
-            repeat with msg in myInbox
-                if read status of msg is false then
-                    set newmail to true
-                    exit repeat
-                end if
-            end repeat
+        check for new mail
+        set myInbox to every message of inbox
+        repeat with msg in myInbox
+        if read status of msg is false then
+        set newmail to true
+        exit repeat
+        end if
+        end repeat
         end tell
         if newmail is true then
-            say "you got mail"
+        say "you got mail"
         end if'"""
     system(cmd)
 
@@ -141,7 +138,7 @@ def findFile(name):
     # no files found
     if len(flist) == 0:
         return -1
-
+    
     dist = len(path.splitext(path.basename(flist[0]))[0])
     curfp = flist[0]
     for fp in flist:
@@ -158,16 +155,6 @@ def findFile(name):
                 curfp = fp
     return curfp
 
-def getUserInput(input):
-    system('say ' + input)
-    with m as source: audio = r.listen(source)
-    try:
-        value = r.recognize_google(audio)
-        print("You said {}".format(value))
-        return value
-    except sr.UnknownValueError:
-        print("Oops! Didn't catch that")
-
 # checks for new mail every 60 sec
 def autoCheckNew():
     checkNew()
@@ -177,13 +164,3 @@ def autoCheckNew():
 def doAutoCheckNew():
     while True:
         autoCheckNew()
-
-try:
-    cont = True
-    while cont:
-        value = getUserInput("Command me")
-        emailChoices(value)
-        if value == "no":
-            cont = False
-except KeyboardInterrupt:
-    pass
