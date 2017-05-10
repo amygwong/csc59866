@@ -112,5 +112,5 @@ def itunesPrevious():
 
 
 #playPlaylist2("Dance with the Devil", "Recently Added")
-playTrack2("Dance with the Devil")
+playTrack("Will Not Go")
 #itunesPrevious()

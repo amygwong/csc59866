@@ -1,9 +1,11 @@
 from os import listdir, system
+import re
 
-
+#open an application with the name of app
 def openApp(app):
     system("open -a \"" + app + "\"")
     
+    #closes an application of the name app
 def closeApp(app):
     system("pkill " + app)
     
@@ -20,13 +22,17 @@ def checkApp(comm):
         if i.lower() in comm:
             print("yay")
             return i
+        
+        appName = re.findall('[A-Z][a-z]*', i)
+        appName = " ".join(appName)
+        print(appName)
     #return false if there are no matches has been found
     print("nothing found")
     return -1
 
 
     
-k = checkApp("open virtualbox please")
+k = checkApp("open virtual box please")
 print (k)
 if k != -1:
     closeApp(k)
