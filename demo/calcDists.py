@@ -72,7 +72,6 @@ class commandList:
                 self.occur.append(int(line[-2:]))
                 self.samples[lineNum] = self.samples[lineNum][:-3]
             else:
-                print(line)
                 self.occur.append(int(line[-1]))
                 self.samples[lineNum] = self.samples[lineNum][:-2]
             
