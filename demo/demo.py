@@ -12,7 +12,6 @@ val = -1
 
 while True:
     sys_says = "Command me"
-        #while inp == "" :
     inp = getUserInput(sys_says)
     while inp == "" or inp == -1:
         inp = getUserInput("Try Again")
