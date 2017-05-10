@@ -17,7 +17,7 @@ def get_cosine(vec1, vec2):
         return float(numerator) / denominator
 
 def text_to_vector(text):
-     words = WORD.findall(text)
+     words = WORD.findall(str(text))
      return Counter(words)
 
 def distScore(text1,text2):
