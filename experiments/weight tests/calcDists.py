@@ -92,4 +92,10 @@ class commandList:
                 f.write('\n')
             f.close()
             
-
+a = commandList()
+a.readFile()
+a.addCommand("open the file please")
+print (a.occurSum)
+print(a.samples)
+print(a.occur)
+a.writeToFile()

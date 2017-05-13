@@ -25,7 +25,6 @@ class commands:
         for i in files:
             a = commandList()
             a.filename = i
-            print(a.filename)
             a.readFile()
             self.comList.append(a)
     

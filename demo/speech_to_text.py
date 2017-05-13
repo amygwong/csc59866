@@ -7,7 +7,6 @@ m = sr.Microphone()
 def getUserInput(input):
     system('say ' + input)
     with m as source: 
-        r.adjust_for_ambient_noise(source)
         audio = r.listen(source)
     try:
         value = r.recognize_google(audio)

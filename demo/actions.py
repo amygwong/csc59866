@@ -34,7 +34,7 @@ def action(com):
     elif com == 8:
         print("Work in progress atm")
     elif com == 9:
-        #cal.listEvents()
+        cal.listEvents()
         print("Work in progress atm")
     elif com == 10:
         inp = ""
