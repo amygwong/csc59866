@@ -8,7 +8,9 @@ class commands:
         files = ["openSafari.txt", "closeSafari.txt","openMessages.txt",
                  "closeMessages.txt", "openNotes.txt", "closeNotes.txt",
                  "upVol.txt", "downVol.txt","setVol.txt", "listEvents.txt",
-                 "createFolder.txt"
+                 "createFolder.txt", "openImage.txt", "openMail.txt",
+                 "closeMail.txt", "syncMail.txt", "readUnreadMail.txt",
+                 "createEmailDraft.txt", "sendCurrentMail.txt"
                 ]
               
         #add the current directory path and trainingData folder to path for opening files        

@@ -11,3 +11,10 @@ Put a value and follow it by the command associated with it
 8: Set Volume Level
 9: List Calendar Events
 10: Create Folder
+11: Open Image
+12: Open Mail
+13: Close Mail
+14: Sync Mail
+15: Read Unread Mail
+16: Create Email Draft 
+17: Send Current Mail

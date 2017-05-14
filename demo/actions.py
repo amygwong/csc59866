@@ -3,8 +3,16 @@ from speech_to_text import getUserInput
 import instruct
 import vol
 import cal
+import previews
+import e_mail
 
 #this file is to handle the actions after classification
+def getDetails(info):
+    np = ""
+    while inp == "" or inp == -1:
+        inp = getUserInput(info)
+    print(inp)
+    return inp
 
 #function takes the command number and executes the function to do that certain command
 def action(com):
@@ -37,8 +45,33 @@ def action(com):
         cal.listEvents()
         print("Work in progress atm")
     elif com == 10:
-        inp = ""
-        while inp == "" or inp == -1:
-            inp = getUserInput("What should the folder be named?")
-        print(inp)
+        inp = getDetails("What should the folder be named?")
         instruct.createDesktopFolder(inp)
+    elif com == 11:
+        previews.openImage()
+    elif com == 12:
+        instruct.openMail()
+    elif com == 13:
+        instruct.closeMail()
+    elif com == 14:
+        e_mail.syncMail()
+    elif com == 15:
+        e_mail.readUnreadMail()
+    elif com == 16:
+        recipient = getDetails("Who is the recipient?")
+        recipient = e_mail.editAddress(recipient)
+        subject = getDetails("What is the subject line?")
+        file = getUserInput("Do you want to attach a file? yes or no?")
+        if file == "yes":
+            file = getUserInput("What is called?")
+            filepath = findFile(file)
+        else:
+            file = ""
+        content = getDetails("What is the content?")
+        e_mail.newEmail(subject, content, recipient, file)
+        system('say Please check and edit. If correct say send mail')
+    elif com == 17:
+        e_mail.sendCurrentMail()
+
+
+
