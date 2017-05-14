@@ -138,9 +138,3 @@ def systemShutDown2():
     cmd = """osascript -e'tell application "System Events" to shut down'
     """
     system(cmd)
-
-
-
-
-
-systemRestart()
