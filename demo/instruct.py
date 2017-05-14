@@ -87,3 +87,60 @@ def deleteDesktopFolder(str):
 
 def deleteFolder(des, soc):
     rmdir(path.expanduser("~/" + des + "/" + soc))
+
+
+
+
+# System command to log out with confirmation
+def systemLogOut():
+
+    cmd = """osascript -e'tell application "System Events" to log out'
+    """
+    system(cmd)
+
+
+# System command to restart with confirmation
+def systemRestart():
+
+    cmd = """osascript -e'tell application "loginwindow" to «event aevtrrst»'
+    """
+    system(cmd)
+
+
+# System command to shut down with confirmation
+def systemShutDown():
+
+    cmd = """osascript -e'tell application "loginwindow" to «event aevtrsdn»'
+    """
+    system(cmd)
+
+
+
+# System command to log out without confirmation
+def systemLogOut2():
+
+    cmd = """osascript -e'tell application "loginwindow" to «event aevtrlgo»'
+    """
+    system(cmd)
+
+
+# System command to restart without confirmation
+def systemRestart2():
+
+    cmd = """osascript -e'tell application "System Events" to restart'
+    """
+    system(cmd)
+
+
+# System command to shut down without confirmation
+def systemShutDown2():
+
+    cmd = """osascript -e'tell application "System Events" to shut down'
+    """
+    system(cmd)
+
+
+
+
+
+systemRestart()
