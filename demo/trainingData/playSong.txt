@@ -1,4 +1,4 @@
-play a song 1
+play a song 6
 play music 1
 play a song please 1
 play music please 1

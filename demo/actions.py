@@ -12,7 +12,7 @@ import currentTime, battery
 
 #this file is to handle the actions after classification
 def getDetails(info):
-    np = ""
+    inp = ""
     while inp == "" or inp == -1:
         inp = getUserInput(info)
     print(inp)
