@@ -31,3 +31,5 @@ Put a value and follow it by the command associated with it
 28: Play a Song
 29: Get Current Time
 30: Get Current Date
+31: Get Battery Pecentage
+32: Get Battery Status
