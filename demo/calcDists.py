@@ -66,6 +66,8 @@ class commandList:
     
     #function to read written file for samples
     def readFile(self):
+        #UNCOMMENT TO FIND WHICH FILE HAS A SYNTAX ERROR
+        #print(self.filename)
         f = open(self.filename, 'r')
         self.samples = f.readlines()
         self.samples = [x.strip() for x in self.samples]
