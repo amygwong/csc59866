@@ -6,6 +6,8 @@ from commands import commands
 from actions import action
 from speech_to_text import getUserInput
 import time
+from e_mail import syncMail
+from battery import checkBattery
 import cal
 
 #setting everything up for the loop
@@ -40,50 +42,12 @@ while True:
         #do passive checking here
         print("Passive check now")
         cal.checkForEvents()
+        syncMail()
+        checkBattery()
+
 
         #reset the clock
         startTime = time.time()
 
 
-    cmd1 = """osascript -e'set appName to "iTunes"
-
-    if application appName is running then
-
-    tell application id (id of application appName)
-
-        try
-    		set whatshappening to (get player state as string)
-    	end try
-
-    	if whatshappening = "paused" then
-    		tell app "iTunes" to play
-    	end if
-
-    end tell
-    end if
-    '
-
-    """
-    system(cmd1)
-
     input("Press Enter to Continue")
-
-    cmd2 = """osascript -e'set appName to "iTunes"
-
-    if application appName is running then
-
-    tell application id (id of application appName)
-
-        try
-    		set whatshappening to (get player state as string)
-    	end try
-
-    	if whatshappening = "playing" then
-    		tell app "iTunes" to pause
-    	end if
-
-    end tell
-    end if'
-
-    """
-    system(cmd2)
