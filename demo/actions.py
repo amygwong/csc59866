@@ -4,16 +4,28 @@ import appOpen
 import instruct
 import vol
 import cal
+import previews
+import e_mail
+import safari
+import tunes
 
 #this file is to handle the actions after classification
+def getDetails(info):
+    np = ""
+    while inp == "" or inp == -1:
+        inp = getUserInput(info)
+    print(inp)
+    return inp
 
 #function takes the command number and executes the function to do that certain command
+
 def action(com,inp):
     
     #this is the value for an unknown command
     if com == -1:
         system('say Command not classified please try again')
         print("Command not classified")
+
     
     #opening an application
     elif com == 0:
@@ -39,7 +51,7 @@ def action(com,inp):
     elif com == 2:
         instruct.openMessages()
     elif com == 3:
-        instruct.closeMessages()    
+        instruct.closeMessages()
     elif com == 4:
         instruct.openNotes()
     elif com == 5:
@@ -51,12 +63,54 @@ def action(com,inp):
     elif com == 8:
         print("Work in progress atm")
     elif com == 9:
-        cal.listEvents()
-        print("Work in progress atm")
+        cal.listAllEvents()
     elif com == 10:
-        inp = ""
-        while inp == "" or inp == -1:
-            inp = getUserInput("What should the folder be named?")
-        print(inp)
+        inp = getDetails("What should the folder be named?")
         instruct.createDesktopFolder(inp)
+    elif com == 11:
+        previews.openImage()
+    elif com == 12:
+        instruct.openMail()
+    elif com == 13:
+        instruct.closeMail()
+    elif com == 14:
+        e_mail.syncMail()
+    elif com == 15:
+        e_mail.readUnreadMail()
+    elif com == 16:
+        recipient = getDetails("Who is the recipient?")
+        recipient = e_mail.editAddress(recipient)
+        subject = getDetails("What is the subject line?")
+        file = getUserInput("Do you want to attach a file? yes or no?")
+        if file == "yes":
+            file = getUserInput("What is called?")
+            filepath = findFile(file)
+        else:
+            file = ""
+        content = getDetails("What is the content?")
+        e_mail.newEmail(subject, content, recipient, file)
+        system('say Please check and edit. If correct say send mail')
+    elif com == 17:
+        e_mail.sendCurrentMail()
+    elif com == 18:
+        instruct.systemLogOut()
+    elif com == 19:
+        instruct.systemRestart()
+    elif com == 20:
+        instruct.systemShutDown
+    elif com == 21:
+        safari.closeFromLeft()
+    elif com == 22:
+        safari.closeFromRight()
+    elif com == 23:
+        safari.copyUrl()
+    elif com == 24:
+        safari.firstTab()
+    elif com == 25:
+        safari.moveLeft()
+    elif com == 26:
+        safari.moveRight()
+    elif com == 27:
+        title = getUserInput("What is the title of the song you wish to listen to?")
+        tunes.playTrack(title)
     return inp

@@ -45,5 +45,5 @@ def openImage():
         if inp == "quit" or found == 1:
             break
 
-openImage()
+#openImage()
 

@@ -11,4 +11,21 @@ Put a value and follow it by the command associated with it
 8: Set Volume Level
 9: List Calendar Events
 10: Create Folder
-________________________
+11: Open Image
+12: Open Mail
+13: Close Mail
+14: Sync Mail
+15: Read Unread Mail
+16: Create Email Draft
+17: Send Current Mail
+18: Log Out of Account
+19: Restart Computer
+20: Shut Down Computer
+21: Close Safari Tabs from left
+22: Close Safari Tabs from right
+23: Copy Url to clipboard
+24: Select first tab
+25: Select last tab
+26: Move left a tab
+27: Move right a tab
+28: Play a song

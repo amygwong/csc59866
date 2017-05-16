@@ -56,7 +56,7 @@ def sendCurrent():
         end tell'"""
     system(cmd)
 
-def readNewMail():
+def readUnreadMail():
     cmd = """ osascript -e 'tell application "Mail"
         set unreadMessages to (get every message of inbox whose read status is false)
         repeat with eachMessage in unreadMessages
@@ -75,7 +75,7 @@ def readNewMail():
     system(cmd)
 
 # updates inbox with new mail and notifies the user if there is new mail
-def checkNew():
+def syncMail():
     cmd = """osascript -e'set newmail to false
         tell application "Mail"
         check for new mail
@@ -89,6 +89,8 @@ def checkNew():
         end tell
         if newmail is true then
         say "you got mail"
+        else 
+        say "your mailbox is up-to-date"
         end if'"""
     system(cmd)
 
@@ -97,10 +99,10 @@ def emailChoices(value):
         system("open -a Mail")
     elif value == "close mail":
         system("pkill mail")
-    elif value == "check mail":
-        checkNew()
+    elif value == "sync mail":
+        syncMail()
     elif value == "read new mail":
-        readNewMail()
+        readUnreadMail()
     elif value == "create draft":
         recipient = getUserInput("Who is the recipient?")
         recipient = editAddress(recipient)
@@ -157,7 +159,7 @@ def findFile(name):
 
 # checks for new mail every 60 sec
 def autoCheckNew():
-    checkNew()
+    syncMail()
     time.sleep(10)
 
 # calls on autoCheckNew

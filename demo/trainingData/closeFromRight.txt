@@ -1,0 +1,2 @@
+close from right 1
+keep first tab 1

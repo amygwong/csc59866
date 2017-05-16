@@ -1,0 +1,6 @@
+log off 1
+log off please 1
+log out 1
+log out please 1
+please log off 1
+please log out 1
