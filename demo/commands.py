@@ -5,7 +5,7 @@ class commands:
     def __init__(self):
         #this variable stores the possible commands
 
-        files = ["openSafari.txt", "closeSafari.txt","openMessages.txt",
+        files = ["openSafari.txt", "closeSafari.txt","deleteFolder.txt",
                  "closeMessages.txt", "openNotes.txt", "closeNotes.txt",
                  "upVol.txt", "downVol.txt","setVol.txt", "listEvents.txt",
                  "createFolder.txt", "openImage.txt", "openMail.txt",

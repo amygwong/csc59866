@@ -2,7 +2,7 @@ This file is just for reference
 Put a value and follow it by the command associated with it
 0: Open Safari
 1: Close Safari
-2: Open Messages
+2: Delete a Folder
 3: Close Messages
 4: Open Notes
 5: Close Notes

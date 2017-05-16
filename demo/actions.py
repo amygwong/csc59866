@@ -21,13 +21,13 @@ def getDetails(info):
 #function takes the command number and executes the function to do that certain command
 
 def action(com,inp):
-    
+
     #this is the value for an unknown command
     if com == -1:
         system('say Command not classified please try again')
         print("Command not classified")
 
-    
+
     #opening an application
     elif com == 0:
         app = appOpen.checkApp(inp)
@@ -38,7 +38,7 @@ def action(com,inp):
             appOpen.openApp(app[0])
             print(app[1])
             return app[1] +'!'
-            
+
     #closing an application
     elif com == 1:
         app = appOpen.checkApp(inp)
@@ -48,9 +48,10 @@ def action(com,inp):
         else:
             appOpen.closeApp(app[0])
             return app[1] + '!'
-        
+
     elif com == 2:
-        instruct.openMessages()
+        inp = getDetails("What is the name of the folder you would like to delete?")
+        instruct.deleteDesktopFolder(inp)
     elif com == 3:
         instruct.closeMessages()
     elif com == 4:
@@ -114,7 +115,7 @@ def action(com,inp):
     elif com == 27:
         safari.moveRight()
     elif com == 28:
-        title = getUserInput("What is the title of the song you wish to listen to?")
+        title = getDetails("What is the title of the song you wish to listen to?")
         tunes.playTrack(title)
     elif com == 29:
         currentTime.getTime()

@@ -102,3 +102,38 @@ say the_text
     """
 
     system(cmd)
+
+
+def checkForEvents():
+    cmd = """osascript -e'set my_date to (current date) -- or any other date you want
+
+    copy my_date to Start_Date
+    set time of Start_Date to 0
+    copy my_date to End_Date
+    set time of End_Date to 86399 -- 23:59:59 in seconds
+
+
+tell application "Calendar"
+   set the_calendar to calendar "Home"
+   set {start_dates, the_summaries} to {start date, summary} of (every event of the_calendar whose (start date is greater than or equal to current date) and (start date is less than or equal to End_Date))
+end tell
+set c to count start_dates
+set text_list to {}
+repeat with i from 1 to c
+   set this_date to item i of start_dates
+   set this_summary to item i of the_summaries
+   set end of text_list to "Event " & i & " starts at " & (time string of this_date) & linefeed & linefeed & "Summary for this event is " & this_summary & linefeed & linefeed
+end repeat
+set the_text to text_list as string
+set text_text2 to "You have " & c & " events left for today."
+say text_text2 using "Cellos"
+delay 1
+say the_text using "Agnes"
+'
+
+
+    """
+
+    system(cmd)
+
+checkForEvents()
