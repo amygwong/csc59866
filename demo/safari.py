@@ -1,21 +1,21 @@
 from os import system
 
-# close tabs to to the left
-def safariCloseLeft():
+# close tabs from the left
+def closeFromLeft():
 
     cmd = """osascript -e'tell application "Safari" to tell window 1 to close (tabs where index ≤ (get index of current tab))'
     """
     system(cmd)
 
-# close tabs to to the right
-def safariCloseLeft():
+# close tabs from the right
+def closeFromRight():
 
     cmd = """osascript -e'tell application "Safari" to tell window 1 to close (tabs where index ≥ (get index of current tab))'
     """
     system(cmd)
 
 # copies url to clipboard
-def safariCopyUrl():
+def copyUrl():
 
     cmd = """osascript -e'tell application "Safari" to set u to URL of document 1
         set the clipboard to u'
@@ -23,7 +23,7 @@ def safariCopyUrl():
     system(cmd)
 
 # selects the first tab in Safari
-def safariFirstTab():
+def firstTab():
 
     cmd = """osascript -e'tell window 1 of application "Safari" to set current tab to tab 1'
     """
@@ -31,27 +31,22 @@ def safariFirstTab():
 
 
 # selects the last tab in Safari
-def safariLastTab():
+def lastTab():
 
     cmd = """osascript -e'tell window 1 of application "Safari" to set current tab to tab -1'
     """
     system(cmd)
 
 # select the tab to the left
-def safariMoveLeft():
+def moveLeft():
 
     cmd = """osascript -e'tell application "Safari" to tell window 1 to set current tab to tab ((get index of current tab) - 1)'
     """
     system(cmd)
 
 # select the tab to the right
-def safariMoveRight():
+def moveRight():
 
     cmd = """osascript -e'tell application "Safari" to tell window 1 to set current tab to tab ((get index of current tab) + 1)'
     """
     system(cmd)
-
-
-
-
-safariFirstTab()

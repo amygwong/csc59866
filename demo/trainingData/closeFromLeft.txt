@@ -1,0 +1,2 @@
+close from left 1
+keep last tab 1

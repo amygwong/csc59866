@@ -1,0 +1,6 @@
+restart 1
+restart please 1
+restart computer 1
+restart computer please 1
+please restart 1
+please restart computer 1

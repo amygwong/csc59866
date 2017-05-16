@@ -119,7 +119,7 @@ set the_text to text_list as string'
     system(cmd)
 
 
-def listEvents5():
+def listAllEvents():
     cmd = """osascript -e'set my_date to (current date) -- or any other date you want
 
     copy my_date to Start_Date
@@ -163,5 +163,3 @@ if reply == "yes":
 else:
     system('say OK, maybe some other time then.')
 '''
-
-listEvents5()
