@@ -118,6 +118,7 @@ tell application "Calendar"
    set {start_dates, the_summaries} to {start date, summary} of (every event of the_calendar whose (start date is greater than or equal to current date) and (start date is less than or equal to End_Date))
 end tell
 set c to count start_dates
+if c > 0 then
 set text_list to {}
 repeat with i from 1 to c
    set this_date to item i of start_dates
@@ -129,11 +130,10 @@ set text_text2 to "You have " & c & " events left for today."
 say text_text2 using "Cellos"
 delay 1
 say the_text using "Agnes"
+end if
 '
 
 
     """
 
     system(cmd)
-
-checkForEvents()
