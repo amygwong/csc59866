@@ -47,7 +47,7 @@ def newEmail(subject, body, recipient, attachment):
     system(cmd)
 
 # sends the draft email that was most recently created
-def sendCurrent():
+def sendCurrentMail():
     cmd = """ osascript -e 'tell application "Mail"
         set newMessage to item -1 of ((every outgoing message))
         tell newMessage
@@ -118,10 +118,11 @@ def emailChoices(value):
         newEmail(subject, content, recipient, file)
         system('say Please check and edit. If correct say send email')
     elif value == "send email":
-        sendCurrent()
+        sendCurrentMail()
     else:
         pass
 
+# converts a string that represents an email address into a proper form
 def editAddress(input):
     input = input.replace(" ","")
     at_position = input.rfind("at")
