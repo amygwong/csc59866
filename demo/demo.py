@@ -45,7 +45,7 @@ while True:
         startTime = time.time()
 
 
-    cmd = """osascript -e'tell application "iTunes"
+    cmd1 = """osascript -e'tell application "iTunes"
 	try
 		set whatshappening to (get player state as string)
 	end try
@@ -57,11 +57,11 @@ while True:
     end tell'
 
     """
-    system(cmd)
+    system(cmd1)
 
     input("Press Enter to Continue")
 
-    cmd = """osascript -e'tell application "iTunes"
+    cmd2 = """osascript -e'tell application "iTunes"
 	try
 		set whatshappening to (get player state as string)
 	end try
@@ -73,4 +73,4 @@ while True:
     end tell'
 
     """
-    system(cmd)
+    system(cmd2)
