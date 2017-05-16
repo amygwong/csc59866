@@ -28,4 +28,6 @@ Put a value and follow it by the command associated with it
 25: Select last tab
 26: Move left a tab
 27: Move right a tab
-28: Play a song
+28: Play a Song
+29: Get Current Time
+30: Get Current Date

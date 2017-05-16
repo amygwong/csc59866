@@ -14,7 +14,8 @@ class commands:
                  "restart.txt", "shutDown.txt", "closeFromLeft.txt",
                  "closeFromRight.txt", "copyUrl.txt", "firstTab.txt",
                  "lastTab.txt", "moveLeftTab.txt", "moveRightTab.txt",
-                 "playSong.txt"
+                 "playSong.txt", "currentTime.txt", "currentDate.txt",
+                 "batteryPercent.txt", "batteryStatus.txt"
                 ]
 
         #add the current directory path and trainingData folder to path for opening files

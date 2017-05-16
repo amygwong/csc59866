@@ -8,6 +8,7 @@ import previews
 import e_mail
 import safari
 import tunes
+import currentTime, battery
 
 #this file is to handle the actions after classification
 def getDetails(info):
@@ -97,7 +98,7 @@ def action(com,inp):
     elif com == 19:
         instruct.systemRestart()
     elif com == 20:
-        instruct.systemShutDown
+        instruct.systemShutDown()
     elif com == 21:
         safari.closeFromLeft()
     elif com == 22:
@@ -107,10 +108,20 @@ def action(com,inp):
     elif com == 24:
         safari.firstTab()
     elif com == 25:
-        safari.moveLeft()
+        safari.lastTab()
     elif com == 26:
-        safari.moveRight()
+        safari.moveLeft()
     elif com == 27:
+        safari.moveRight()
+    elif com == 28:
         title = getUserInput("What is the title of the song you wish to listen to?")
         tunes.playTrack(title)
+    elif com == 29:
+        currentTime.getTime()
+    elif com == 30:
+        currentTime.getDate()
+    elif com == 31:
+        battery.getBatteryPecentage()
+    elif com == 32:
+        battery.getBatteryStatus()
     return inp
