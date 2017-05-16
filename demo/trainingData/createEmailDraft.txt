@@ -1,28 +1,6 @@
 create draft mail 1
 please create draft mail 1
 create a draft mail 1
-please create a draft mail 1
-create mail draft 1
-please create mail draft 1
-create a mail draft 1
-please create  a mail draft 1
-create new mail 1
-create a new mail 1
-please create a new mail 1
-write a draft mail 1
-write draft mail 1
-please write a new draft mail 1
-create draft email 1
-please create draft email 1
-create a draft email 1
-please create a draft email 1
-create email draft 1
-please create email draft 1
-create an email draft 1
-please create  a email draft 1
-create new email 1
-create a new email 1
-please create a new email 1
-write a draft email 1
-write draft email 1
-please write a new draft email 1
+create a new draft 1
+please make a draft 1
+make a new mail draft 1

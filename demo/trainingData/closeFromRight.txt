@@ -1,2 +1,3 @@
 close from right 1
-keep first tab 1
+close the right tab 1
+close right tab 1
