@@ -52,16 +52,16 @@ while True:
 
     set safRunning to is_running("iTunes")
     if safRunning then
-    tell application "iTunes"
+    run script "tell application \"iTunes\"
 	try
 		set whatshappening to (get player state as string)
 	end try
 
-	if whatshappening = "paused" then
+	if whatshappening = \"paused\" then
 		tell app "iTunes" to play
 	end if
 
-    end tell
+    end tell"
     end if
     '
 
@@ -77,16 +77,16 @@ while True:
 
     set safRunning to is_running("iTunes")
     if safRunning then
-    tell application "iTunes"
+        run script "tell application \"iTunes\"
 	try
 		set whatshappening to (get player state as string)
 	end try
 
-	if whatshappening = "playing" then
+	if whatshappening = \"playing\" then
 		tell app "iTunes" to paused
 	end if
 
-    end tell
+    end tell"
     end if'
 
     """
