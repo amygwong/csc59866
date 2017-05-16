@@ -43,4 +43,34 @@ while True:
 
         #reset the clock
         startTime = time.time()
+
+
+    cmd = """osascript -e'tell application "iTunes"
+	try
+		set whatshappening to (get player state as string)
+	end try
+
+	if whatshappening = "paused" then
+		tell app "iTunes" to play
+	end if
+
+    end tell'
+
+    """
+    system(cmd)
+
     input("Press Enter to Continue")
+
+    cmd = """osascript -e'tell application "iTunes"
+	try
+		set whatshappening to (get player state as string)
+	end try
+
+	if whatshappening = "playing" then
+		tell app "iTunes" to pause
+	end if
+
+    end tell'
+
+    """
+    system(cmd)

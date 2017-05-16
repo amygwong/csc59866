@@ -1,7 +1,7 @@
 from os import system
 
 # System command to shut down without confirmation
-def systemShutDown2():
+def checkUpdates():
 
     cmd = """osascript -e'tell application "System Events" to tell (first application process whose ¬
 frontmost is true) to set returnValue to title of ((first menu item whose title ¬
