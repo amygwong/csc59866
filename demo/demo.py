@@ -30,7 +30,10 @@ while True:
     val = a.getCommand(inp)
     print(val)
     #do the command
-    action(val)
+    sent = action(val,inp)
+    if sent != "" and val != -1:
+        a.comList[val].addCommand(sent)
+        a.comList[val].writeToFile()
     
     if time.time()-startTime > 120:
         #do passive checking here

@@ -41,8 +41,6 @@ class commands:
                 maxVal = newVal
                 maxInd = ind
         if maxVal > .4:
-            #print (self.comList[maxInd].addCommand(inp))
-            self.comList[maxInd].writeToFile()
             return maxInd
         else:
             return -1

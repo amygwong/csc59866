@@ -1,5 +1,6 @@
 from os import system, mkdir, path, rmdir
 from speech_to_text import getUserInput
+import appOpen
 import instruct
 import vol
 import cal
@@ -7,18 +8,34 @@ import cal
 #this file is to handle the actions after classification
 
 #function takes the command number and executes the function to do that certain command
-def action(com):
+def action(com,inp):
     
     #this is the value for an unknown command
     if com == -1:
         system('say Command not classified please try again')
         print("Command not classified")
     
-    #opening safari
+    #opening an application
     elif com == 0:
-        instruct.openSafari()
+        app = appOpen.checkApp(inp)
+        if app == -1:
+            system('say could not find the application')
+            return ""
+        else:
+            appOpen.openApp(app[0])
+            print(app[1])
+            return app[1] +'!'
+            
+    #closing an application
     elif com == 1:
-       instruct.closeSafari()
+        app = appOpen.checkApp(inp)
+        if app == -1:
+            system('say could not find the application')
+            return ""
+        else:
+            appOpen.closeApp(app[0])
+            return app[1] + '!'
+        
     elif com == 2:
         instruct.openMessages()
     elif com == 3:
@@ -42,3 +59,4 @@ def action(com):
             inp = getUserInput("What should the folder be named?")
         print(inp)
         instruct.createDesktopFolder(inp)
+    return inp

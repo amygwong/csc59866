@@ -20,19 +20,13 @@ def checkApp(comm):
         #change to return the index here ------------------------
         #check to see if there is a match
         if i.lower() in comm.lower():
-            print(i.lower())
-            print(comm.lower().replace(i.lower(),""))
             return [i,comm.lower().replace(" "+i.lower(),"")]
         
         appName = re.findall('[A-Z][a-z]*', i)
         appName = " ".join(appName)
         if appName.lower() in comm.lower() and "" != appName:
-            print("something")
-            print(comm.replace(appName.lower(),""))
-            return [i,comm.lower().replace(" "+appName.lower(),"")]
+            return [i,comm.lower().replace(appName.lower()+" ","")]
             
     #return false if there are no matches has been found
-    print("nothing found")
     return -1
 
-print(checkApp("open Steam"))

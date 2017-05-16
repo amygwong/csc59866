@@ -19,6 +19,12 @@ class commandList:
         
         for ind, i in enumerate(self.samples):
             sum = sum + (distScore(inp,i)*(1+.1*(self.occur[ind]/self.occurSum)))
+        
+        #give a boost to statements that end with the !
+        if self.samples[0].endswith('!'):
+            return (sum/len(self.samples)) * 1.1
+        
+        #return the regular average
         return sum/len(self.samples)
         
     #add a command to the command list    
