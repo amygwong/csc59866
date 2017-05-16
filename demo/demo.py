@@ -43,3 +43,4 @@ while True:
 
         #reset the clock
         startTime = time.time()
+    input("Press Enter to Continue")
