@@ -45,23 +45,21 @@ while True:
         startTime = time.time()
 
 
-    cmd1 = """osascript -e'on is_running(appName)
-    tell application "System Events" to (name of processes) contains appName
-    end is_running
+    cmd1 = """osascript -e'set appName to "iTunes"
 
+    if application appName is running then
 
-    set safRunning to is_running("iTunes")
-    if safRunning then
-    run script "tell application \"iTunes\"
-	try
-		set whatshappening to (get player state as string)
-	end try
+    tell application id (id of application appName)
 
-	if whatshappening = \"paused\" then
-		tell app "iTunes" to play
-	end if
+        try
+    		set whatshappening to (get player state as string)
+    	end try
 
-    end tell"
+    	if whatshappening = "paused" then
+    		tell app "iTunes" to play
+    	end if
+
+    end tell
     end if
     '
 
@@ -70,23 +68,21 @@ while True:
 
     input("Press Enter to Continue")
 
-    cmd2 = """osascript -e'on is_running(appName)
-    tell application "System Events" to (name of processes) contains appName
-    end is_running
+    cmd2 = """osascript -e'set appName to "iTunes"
 
+    if application appName is running then
 
-    set safRunning to is_running("iTunes")
-    if safRunning then
-        run script "tell application \"iTunes\"
-	try
-		set whatshappening to (get player state as string)
-	end try
+    tell application id (id of application appName)
 
-	if whatshappening = \"playing\" then
-		tell app "iTunes" to paused
-	end if
+        try
+    		set whatshappening to (get player state as string)
+    	end try
 
-    end tell"
+    	if whatshappening = "playing" then
+    		tell app "iTunes" to pause
+    	end if
+
+    end tell
     end if'
 
     """
