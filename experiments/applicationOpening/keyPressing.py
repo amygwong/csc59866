@@ -20,13 +20,13 @@ mydata.loc[:,'label'][mydata['label']=="male"] = 0
 mydata.loc[:,'label'][mydata['label']=="female"] = 1
 mydata_train, mydata_test = train_test_split(mydata, random_state=0, test_size=.2)
 scaler = StandardScaler()
-scaler.fit(mydata_train.ix[:,0:5])
-X_train = scaler.transform(mydata_train.ix[:,0:5])
-X_test = scaler.transform(mydata_test.ix[:,0:5])
+scaler.fit(mydata_train.ix[:,0:3])
+X_train = scaler.transform(mydata_train.ix[:,0:3])
+X_test = scaler.transform(mydata_test.ix[:,0:3])
 y_train = list(mydata_train['label'].values)
 y_test = list(mydata_test['label'].values)
 
-print(mydata_train.ix[:,0:5])
+print(mydata_train.ix[:,0:3])
 
 #train the data
 svm = SVC().fit(X_train, y_train)
