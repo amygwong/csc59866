@@ -6,7 +6,7 @@ from commands import commands
 from actions import action
 from speech_to_text import getUserInput
 import time
-from e_mail import syncMail
+from e_mail import psyncMail
 from battery import checkBattery
 import cal
 
@@ -38,13 +38,13 @@ while True:
         a.comList[val].addCommand(sent)
         a.comList[val].writeToFile()
 
-    if time.time()-startTime > 20:
+    if time.time()-startTime > 2000000:
         #do passive checking here
         print("Passive check now")
         cal.checkForEvents()
-        syncMail()
+        psyncMail()
         checkBattery()
-
+        print("Passive check done")
 
         #reset the clock
         startTime = time.time()

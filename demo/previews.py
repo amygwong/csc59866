@@ -45,5 +45,15 @@ def openImage():
         if inp == "quit" or found == 1:
             break
 
+def openFile():
+    found = -1
+    # get name of image
+    inp = getUserInput("What is the name of the file")
+    while inp == "" or inp == -1 or found == -1:
+        inp = getUserInput("Try Again")
+        if inp != "" and inp != -1:
+            found = findOpenImage(inp)
+        if inp == "quit" or found == 1:
+            break
 #openImage()
 

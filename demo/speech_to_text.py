@@ -15,5 +15,5 @@ def getUserInput(input):
         print("You said {}".format(value))
         return value
     except sr.UnknownValueError:
-        print("dsfDSAF")
+        print("Oops! Didn't catch that")
         return -1

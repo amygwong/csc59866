@@ -51,7 +51,7 @@ def checkBattery():
         set text item delimiters to tab
         set battStatus to text 1 thru -2 of last text item of item 1 of battStatus as integer
         set text item delimiters to TID
-        if battStatus is greater than lowBattery then
+        if battStatus is less than lowBattery then
             say "Low Battery"
             say battStatus
             say "percent left. Please connect to AC Power Adapter"
