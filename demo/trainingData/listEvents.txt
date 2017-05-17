@@ -2,3 +2,4 @@ what events do i have today 1
 list my events for today 1
 do i have any events today 1
 list events 1
+where are my events for today 1

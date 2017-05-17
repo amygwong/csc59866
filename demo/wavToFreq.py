@@ -4,7 +4,7 @@ from scipy import stats
 from scipy.fftpack import fft
 import wave
 
-filename = "microphone-results.wav"
+filename = "about_time.wav"
 
 sample_rate, data = wavfile.read(filename)
 
@@ -16,13 +16,13 @@ c = fft(b) # calculate fourier transform (complex numbers list)
 d = int(len(c)/2)
 
 freqs = abs(c[:(d-1)])
-freqs = [i/1000 for i in freqs if i < 280]
+freqs = [i*fs/1000000 for i in freqs if i*fs/1000 < 280]
 
 meanfreq = np.mean(freqs)
 sd = np.std(freqs)
 median = np.median(freqs)
 q75, q25 = np.percentile(freqs, [75 ,25])
 
-print(meanfreq,sd,median,q25,q75)
+print(meanfreq,',',sd,',',median,',',q25,',',q75)
 
 
