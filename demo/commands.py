@@ -9,7 +9,7 @@ class commands:
                  "addEvents.txt", "openNotes.txt", "closeNotes.txt",
                  "upVol.txt", "downVol.txt","setVol.txt", "listEvents.txt",
                  "createFolder.txt", "openImage.txt", "openFile.txt",
-                 "closeMail.txt", "syncMail.txt", "readUnreadMail.txt",
+                 "gender.txt", "syncMail.txt", "readUnreadMail.txt",
                  "createEmailDraft.txt", "sendCurrentMail.txt", "logOut.txt",
                  "restart.txt", "shutDown.txt", "closeFromLeft.txt",
                  "closeFromRight.txt", "copyUrl.txt", "firstTab.txt",

@@ -9,6 +9,7 @@ import e_mail
 import safari
 import tunes
 import currentTime, battery
+from wavToFreq import findGender
 
 #this file is to handle the actions after classification
 def getDetails(info):
@@ -76,7 +77,7 @@ def action(com,inp):
     elif com == 12:
         previews.openFile()
     elif com == 13:
-        instruct.closeMail()
+        findGender()
     elif com == 14:
         e_mail.syncMail()
     elif com == 15:

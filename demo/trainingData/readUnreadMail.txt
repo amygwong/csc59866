@@ -2,7 +2,7 @@ read new mail 3
 please read new mail 1
 read unread mail 1
 please read unread mail 1
-read new email 2
+read new email 3
 please read new email 1
 read unread email 1
 please read unread email 1

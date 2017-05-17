@@ -94,6 +94,23 @@ def syncMail():
         end if'"""
     system(cmd)
 
+def psyncMail():
+    cmd = """osascript -e'set newmail to false
+        tell application "Mail"
+        check for new mail
+        set myInbox to every message of inbox
+        repeat with msg in myInbox
+        if read status of msg is false then
+        set newmail to true
+        exit repeat
+        end if
+        end repeat
+        end tell
+        if newmail is true then
+        say "you got mail"
+        end if'"""
+    system(cmd)
+
 def emailChoices(value):
     if value == "open mail":
         system("open -a Mail")

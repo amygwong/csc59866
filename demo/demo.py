@@ -6,7 +6,7 @@ from commands import commands
 from actions import action
 from speech_to_text import getUserInput
 import time
-from e_mail import syncMail
+from e_mail import psyncMail
 from battery import checkBattery
 import cal
 
@@ -42,7 +42,7 @@ while True:
         #do passive checking here
         print("Passive check now")
         cal.checkForEvents()
-        syncMail()
+        psyncMail()
         checkBattery()
         print("Passive check done")
 

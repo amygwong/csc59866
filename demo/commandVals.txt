@@ -13,7 +13,7 @@ Put a value and follow it by the command associated with it
 10: Create Folder
 11: Open Image
 12: Open File
-13: Close Mail
+13: Voice Gender
 14: Sync Mail
 15: Read Unread Mail
 16: Create Email Draft

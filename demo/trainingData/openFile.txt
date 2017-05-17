@@ -2,7 +2,7 @@ open file 4
 please open file 1
 can you open file 1
 can you find file 2
-find file 1
+find file 2
 open file 1
 please find and open file 1
 locate file 1
