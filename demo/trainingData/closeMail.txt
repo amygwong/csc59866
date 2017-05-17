@@ -1,5 +1,6 @@
 can you close mail 1
 please close mail 1
-close mail 1
+close mail 2
 please close mail 1
 closed mail 1
+check mail 1

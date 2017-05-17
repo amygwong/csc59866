@@ -6,3 +6,4 @@ what is the battery status please 1
 what is the battery information 1
 battery information 1
 please tell me the battery information 1
+get battery status 1

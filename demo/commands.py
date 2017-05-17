@@ -6,7 +6,7 @@ class commands:
         #this variable stores the possible commands
 
         files = ["openSafari.txt", "closeSafari.txt","deleteFolder.txt",
-                 "closeMessages.txt", "openNotes.txt", "closeNotes.txt",
+                 "addEvents.txt", "openNotes.txt", "closeNotes.txt",
                  "upVol.txt", "downVol.txt","setVol.txt", "listEvents.txt",
                  "createFolder.txt", "openImage.txt", "openMail.txt",
                  "closeMail.txt", "syncMail.txt", "readUnreadMail.txt",

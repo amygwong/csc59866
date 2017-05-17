@@ -1,4 +1,4 @@
-sync mail 2
+sync mail 3
 can you please sync mail 1
 please sync mail 1
 do i have any new mail 1
@@ -7,3 +7,4 @@ can you sync mail 1
 get new mail 1
 can you get mail 1
 please get mail 1
+get mail 2

@@ -9,3 +9,4 @@ please tell me the battery level 1
 battery level please 1
 what is the battery amount 1
 battery amount 1
+get battery percentage 1

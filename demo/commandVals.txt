@@ -3,7 +3,7 @@ Put a value and follow it by the command associated with it
 0: Open Safari
 1: Close Safari
 2: Delete a Folder
-3: Close Messages
+3: Create Events
 4: Open Notes
 5: Close Notes
 6: Volume Up
@@ -31,5 +31,5 @@ Put a value and follow it by the command associated with it
 28: Play a Song
 29: Get Current Time
 30: Get Current Date
-31: Get Battery Pecentage
+31: Get Battery Percentage
 32: Get Battery Status

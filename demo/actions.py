@@ -53,7 +53,9 @@ def action(com,inp):
         inp = getDetails("What is the name of the folder you would like to delete?")
         instruct.deleteDesktopFolder(inp)
     elif com == 3:
-        instruct.closeMessages()
+        desc = getDetails("What description would you like for your event?")
+        summ = getDetails("What summary would you like for your event?")
+        cal.makeEvents(desc, summ)
     elif com == 4:
         instruct.openNotes()
     elif com == 5:
@@ -122,7 +124,7 @@ def action(com,inp):
     elif com == 30:
         currentTime.getDate()
     elif com == 31:
-        battery.getBatteryPecentage()
+        battery.getBatteryPercentage()
     elif com == 32:
         battery.getBatteryStatus()
     return inp

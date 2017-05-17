@@ -17,30 +17,30 @@ def makeEvent():
          activate
          tell calendar "Home"
               set theCurrentDate to current date
-              make new event at end with properties {description:"%s", summary:"%s", location:"%s", start date:theCurrentDate, end date:theCurrentDate +120 * Minutes}
+              make new event at end with properties {description:"%s", summary:"%s", start date:theCurrentDate, end date:theCurrentDate +120 * Minutes}
          end tell
          reload calendars
     end Tell'
 
-    """ % (desc, summ, loc)
+    """ % (desc, summ)
 
     system(cmd)
 
 
 
 #Function for making events
-def makeEvents(desc, summ, loc):
+def makeEvents(desc, summ):
 
     cmd = """osascript -e'Tell application "Calendar"
          activate
          tell calendar "Home"
               set theCurrentDate to current date
-              make new event at end with properties {description:"%s", summary:"%s", location:"%s", start date:theCurrentDate, end date:theCurrentDate +120 * Minutes}
+              make new event at end with properties {description:"%s", summary:"%s", start date:theCurrentDate, end date:theCurrentDate +120 * Minutes}
          end tell
          reload calendars
     end Tell'
 
-    """ % (desc, summ, loc)
+    """ % (desc, summ)
 
     system(cmd)
 
@@ -127,9 +127,9 @@ repeat with i from 1 to c
 end repeat
 set the_text to text_list as string
 set text_text2 to "You have " & c & " events left for today."
-say text_text2 using "Cellos"
+say text_text2
 delay 1
-say the_text using "Agnes"
+say the_text 
 end if
 '
 
