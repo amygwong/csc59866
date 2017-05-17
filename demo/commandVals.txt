@@ -12,7 +12,7 @@ Put a value and follow it by the command associated with it
 9: List Calendar Events
 10: Create Folder
 11: Open Image
-12: Open Mail
+12: Open File
 13: Close Mail
 14: Sync Mail
 15: Read Unread Mail

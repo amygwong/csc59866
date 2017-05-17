@@ -72,7 +72,7 @@ def action(com,inp):
     elif com == 11:
         previews.openImage()
     elif com == 12:
-        instruct.openMail()
+        previews.openFile()
     elif com == 13:
         instruct.closeMail()
     elif com == 14:

@@ -1,7 +1,7 @@
-open image 1
+open image 2
 please open image 1
 can you open image 1
-can you find image 1
+can you find image 2
 find image 1
 open image 1
 please find and open image 1
