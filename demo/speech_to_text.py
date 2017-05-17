@@ -8,6 +8,8 @@ def getUserInput(input):
     system('say ' + input)
     with m as source: 
         audio = r.listen(source)
+    with open("microphone-results.wav", "wb") as f:
+        f.write(audio.get_wav_data())
     try:
         value = r.recognize_google(audio)
         print("You said {}".format(value))
