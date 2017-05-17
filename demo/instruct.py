@@ -138,3 +138,14 @@ def systemShutDown2():
     cmd = """osascript -e'tell application "System Events" to shut down'
     """
     system(cmd)
+
+# changes background, need to include extension in file name for input
+def changeBackground(pic):
+    cmd = """osascript -e'set a to "/Library/Desktop Pictures/"
+    set b to "%s"
+    set c to a & b
+    tell application "Finder" to set desktop picture to POSIX file c
+    '
+    """ %(pic)
+
+    system(cmd)
