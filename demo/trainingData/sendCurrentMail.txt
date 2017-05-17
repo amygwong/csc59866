@@ -1,12 +1,12 @@
 send current mail 1
-send mail 1
+send mail 4
 send open mail 1
 send current draft 1
 please send mail 1
 can you send mail 1
 please send current mail 1
 please send open draft 1
-send email 1
+send email 2
 send open email 1
 send draft 1
 can you send the email 1

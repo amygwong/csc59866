@@ -1,6 +1,6 @@
 move right 1
 move right please 1
-move to right tab 2
+move to right tab 4
 move to right tab please 1
 please move right 1
 please move to right tab 1

@@ -122,7 +122,7 @@ def action(com,inp):
     elif com == 30:
         currentTime.getDate()
     elif com == 31:
-        battery.getBatteryPecentage()
+        battery.getBatteryPercentage()
     elif com == 32:
         battery.getBatteryStatus()
     return inp

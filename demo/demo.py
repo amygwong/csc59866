@@ -44,7 +44,7 @@ while True:
         cal.checkForEvents()
         syncMail()
         checkBattery()
-
+        print("Passive check done")
 
         #reset the clock
         startTime = time.time()
