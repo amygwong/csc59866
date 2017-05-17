@@ -10,8 +10,6 @@ def makeEvent():
     system('say What summary would you like for your event?')
     summ = input("What description would you like for your event?")
 
-    system('say Where will this event take place?')
-    loc = input("Where will this event take place? ")
 
     cmd = """osascript -e'Tell application "Calendar"
          activate
@@ -35,7 +33,7 @@ def makeEvents(desc, summ):
          activate
          tell calendar "Home"
               set theCurrentDate to current date
-              make new event at end with properties {description:"%s", summary:"%s", start date:theCurrentDate, end date:theCurrentDate +120 * Minutes}
+              make new event at end with properties {description:"%s", summary:"%s", start date:theCurrentDate +120 * Minutes, end date:theCurrentDate +240 * Minutes}
          end tell
          reload calendars
     end Tell'
@@ -129,7 +127,7 @@ set the_text to text_list as string
 set text_text2 to "You have " & c & " events left for today."
 say text_text2
 delay 1
-say the_text 
+say the_text
 end if
 '
 
