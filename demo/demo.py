@@ -38,7 +38,7 @@ while True:
         a.comList[val].addCommand(sent)
         a.comList[val].writeToFile()
 
-    if time.time()-startTime > 20:
+    if time.time()-startTime > 2000000:
         #do passive checking here
         print("Passive check now")
         cal.checkForEvents()

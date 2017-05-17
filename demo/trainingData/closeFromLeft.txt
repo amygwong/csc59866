@@ -2,6 +2,6 @@ close from left tab 1
 close last tab 1
 close the left tab 1
 close tab 1
-close Safari 6
+close Safari 7
 close iTunes 4
 close preview 6

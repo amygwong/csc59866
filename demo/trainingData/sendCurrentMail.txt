@@ -1,5 +1,5 @@
 send current mail 1
-send mail 5
+send mail 6
 send open mail 1
 send current draft 1
 please send mail 1
