@@ -34,6 +34,5 @@ def findOpenImage(name):
 
 # calls this when user asks to open an image
 found = -1
-found = findOpenImage("gudetama")
-print(found)
-    
+found = findOpenImage("Program 3")
+print(found)    
