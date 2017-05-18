@@ -3,7 +3,6 @@ import numpy as np
 from scipy import stats
 from scipy.fftpack import fft
 import wave
-import matplotlib.pyplot as plt
 import math
 filename = "microphone-results.wav"
 
@@ -45,8 +44,11 @@ mid = n/2
 currInd = 0
 #sort the frequencies
 newfreqs, amps = zip(*sorted(zip(newfreqs, amps)))
+for q in amps:
+    print(q)
 for ind, i in enumerate(amps):
     sum = i + sum
+    print(ind, sum)
     if sum > mid:
         currInd = ind
         break
@@ -55,6 +57,8 @@ median = newfreqs[currInd]
 #calculate the q25 <----------------
 qnewfreqs = newfreqs[0:currInd]
 qamps = amps[0:currInd]
+for q in qamps:
+    print(q)
 qmid = np.sum(qamps)/2
 qInd = 0
 sum = 0
@@ -65,8 +69,20 @@ for ind, i in enumerate(qamps):
         break
 q25 = newfreqs[qInd]
 
+#q75
+qnewfreqs = newfreqs[currInd+1:]
+qamps = amps[currInd+1:]
+qmid = np.sum(qamps)/2
+qInd = 0
+sum = 0
+for ind, i in enumerate(qamps):
+    sum = i + sum
+    if sum > qmid:
+        qInd = ind
+        break
+q75 = newfreqs[currentInd+1+qInd]
 
-q75 = 0 #<-------
 print(meanfreq,',',sd,',',median,',',q25,',',q75)
 
+"""
 
