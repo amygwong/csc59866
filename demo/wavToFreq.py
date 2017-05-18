@@ -44,11 +44,8 @@ mid = n/2
 currInd = 0
 #sort the frequencies
 newfreqs, amps = zip(*sorted(zip(newfreqs, amps)))
-for q in amps:
-    print(q)
 for ind, i in enumerate(amps):
     sum = i + sum
-    print(ind, sum)
     if sum > mid:
         currInd = ind
         break
@@ -57,8 +54,6 @@ median = newfreqs[currInd]
 #calculate the q25 <----------------
 qnewfreqs = newfreqs[0:currInd]
 qamps = amps[0:currInd]
-for q in qamps:
-    print(q)
 qmid = np.sum(qamps)/2
 qInd = 0
 sum = 0
@@ -80,9 +75,6 @@ for ind, i in enumerate(qamps):
     if sum > qmid:
         qInd = ind
         break
-q75 = newfreqs[currentInd+1+qInd]
+q75 = newfreqs[currInd+1+qInd]
 
 print(meanfreq,',',sd,',',median,',',q25,',',q75)
-
-"""
-
