@@ -5,7 +5,7 @@ By: Shawn Mathew, Anthony Tan and Amy Wong
 NOTE: To see the number of commits made by each member, please click on commits link underneath the <> Code tab. Do not look at the Graphs tab.
 
 **Running Locally**
-Make sure you have the latest Git and Python version installed!
+Make sure you have the latest Git and Python(3.6+) version installed!
 
 `$ git clone https://github.com/amygwong/csc59866.git`
 
@@ -25,3 +25,9 @@ To deactivate the virtual environment:
 (venv) $ deactivate
 $
 ```
+To run the program:
+```
+(venv) $ cd demo
+(venv) $ python3 demo.py
+```
+The list of commands can be found in `/demo/commandsVal.txt`
