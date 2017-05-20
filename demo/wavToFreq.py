@@ -4,7 +4,7 @@ from scipy import stats
 from scipy.fftpack import fft
 import wave
 import math
-filename = "microphone-results.wav"
+filename = "about_time.wav"
 
 sample_rate, data = wavfile.read(filename)
 

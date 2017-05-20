@@ -1,4 +1,4 @@
-what time is it 1
+what time is it 2
 time is 1
 tell me the time 1
 tell me the time please 1
@@ -10,4 +10,4 @@ the current time is 1
 what is the current time 1
 please what is the current time 1
 please current time is 1
-get time 2
+time 3

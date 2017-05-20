@@ -9,7 +9,7 @@ import e_mail
 import safari
 import tunes
 import currentTime, battery
-from wavToFreq import findGender
+from wavToFreqOLD import findGender
 
 #this file is to handle the actions after classification
 def getDetails(info):
@@ -49,7 +49,6 @@ def action(com,inp):
         else:
             appOpen.closeApp(app[0])
             return app[1] + '!'
-
     elif com == 2:
         inp = getDetails("What is the name of the folder you would like to delete?")
         instruct.deleteDesktopFolder(inp)

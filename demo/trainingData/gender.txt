@@ -2,8 +2,8 @@ find gender of voice 1
 find voice gender 4
 please find gender 1
 please find voice gender 1
-please find gender voice 1
+please find gender voice 3
 find gender 1
 find voice for gender 1
 find voice of gender 1
-find gender voice 3
+find gender voice 5

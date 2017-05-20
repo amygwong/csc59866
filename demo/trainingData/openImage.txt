@@ -1,4 +1,4 @@
-open image 2
+open image 4
 please open image 1
 can you open image 1
 can you find image 2
@@ -7,4 +7,4 @@ open image 1
 please find and open image 1
 locate image 1
 view image 1
-look at image 1
+open an image 1
