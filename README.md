@@ -30,4 +30,18 @@ To run the program:
 (venv) $ cd demo
 (venv) $ python3 demo.py
 ```
-The list of commands can be found in `/demo/commandsVal.txt`
+The list of commands is shown below, but can also be found in `/demo/commandsVal.txt`.
+
+```
+Universal open and close applications: This can be done for any application that is located in the application folder. Example: Open Mail
+Calendar: Create and List/Read Events
+Folder: Create, Delete
+Preview: Find and open file (image/document/pdf)
+Mail: Sync, Create and Send Draft, Read New Mail
+System: Log Out, Restart and Shutdown Computer
+Volume Control: Up, Down
+Safari: Close, Move, and Select Tabs, Copy Url to Clipboard
+iTunes: Play Song
+Get Information: Time, Date, Battery Percentage and Status
+Find Gender of Voice: This command has a 50% accuracy rate in identifying the gender of the user based on the voice input.
+```
