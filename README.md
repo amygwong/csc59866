@@ -33,7 +33,7 @@ To run the program:
 The list of commands is shown below, but can also be found in `/demo/commandsVal.txt`.
 
 ```
-Universal open and close applications: This can be done for any application that is located in the application folder. Example: Open Mail
+Universal open and close applications: This can be done for any application that is located in the application folder. Examples: Open iTunes. Note: Training is not availiable for this command. 
 Calendar: Create and List/Read Events
 Folder: Create, Delete
 Preview: Find and open file (image/document/pdf)
